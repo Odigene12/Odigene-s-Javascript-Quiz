@@ -32,26 +32,26 @@ function checkInput(){
 	};
 }
 
+
+
+
+// create function that builds tree using height and character input values and makes space between characters
+function treetop(object) {
+	for (var i = 1; i <= object.height ; i++){
+		var spaceJam = object.height -i
+		var demChars = (i * 2) - 1
+		console.log( " ".repeat(spaceJam)+ object.character.repeat(demChars));
+	};
+}
+
 // create function that refreshes div and clears it out
 function clear() {
   document.getElementById("treeDiv").innerHTML="";
 }
 
-// create function that builds tree using height and character input values and makes space between characters
-function treetop(object) {
-	for (i = 1; i <= object.height ; i++){
-		var spaceJam = object.height -1
-		var demChars = (i * 2) - 1
-
-	};
-}
 
 
-
-
-
-
-// Add event listener for click that checks what is inputed into lines and then starts the tree
-document.getElementById("butt").addEventListener("click", checkInput)
 // Add event listener for click that clears values entered by user.
 document.getElementById("butt2").addEventListener("click", clear)
+// Add event listener for click that checks what is inputed into lines and then starts the tree
+document.getElementById("butt").addEventListener("click", checkInput)
