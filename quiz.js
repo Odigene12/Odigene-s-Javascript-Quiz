@@ -30,7 +30,9 @@ function checkInput(){
 	else { 
 		treetop(object)
 	};
+	return false;
 }
+
 
 
 
@@ -51,7 +53,21 @@ function clear() {
 
 
 
+
 // Add event listener for click that clears values entered by user.
 document.getElementById("butt2").addEventListener("click", clear)
 // Add event listener for click that checks what is inputed into lines and then starts the tree
 document.getElementById("butt").addEventListener("click", checkInput)
+
+document.getElementById("charInput").addEventListener("keypress", function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) 
+    	checkInput()
+    });
+
+
+document.getElementById("heightInput").addEventListener("keypress", function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) 
+      checkInput()
+    });
