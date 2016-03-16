@@ -22,7 +22,6 @@ function getValue(){
 // create function that checks values (using a function) that are inputted by user and shoots out alert if they do not put any values and  
 function checkInput(){
 	var object = getValue();
-	console.log("object value", object);
 	if (object.height === "" || object.character === ""){
 		alert("Please input Stuff");
 	}	
@@ -47,7 +46,8 @@ function treetop(object) {
 
 // create function that refreshes div and clears it out
 function clear() {
-  document.getElementById("treeDiv").innerHTML="";
+  document.getElementById("charInput").value="";
+  document.getElementById("heightInput").value="";
 }
 
 
@@ -71,3 +71,6 @@ document.getElementById("heightInput").addEventListener("keypress", function (e)
     if (key === 13) 
       checkInput()
     });
+
+
+
